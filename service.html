@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Anjali’s Mehndi</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fffafc;
+      color: #333;
+    }
+
+    .services-header {
+      text-align: center;
+      background: linear-gradient(45deg, #ff4b91, #ff7eb3);
+      padding: 50px 20px;
+      color: white;
+    }
+
+    .services-header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .services-header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .service-card h3 {
+      margin: 15px 0 10px;
+      color: #ff4b91;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .why-choose {
+      text-align: center;
+      padding: 40px 20px;
+      background: #fff0f6;
+    }
+
+    .why-choose h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ff4b91;
+    }
+
+    .why-choose ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+
+    .why-choose li {
+      margin: 10px 0;
+      position: relative;
+      padding-left: 25px;
+    }
+
+    .why-choose li::before {
+      content: "✔️";
+      position: absolute;
+      left: 0;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(45deg, #ff7eb3, #ff4b91);
+      color: white;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      background: white;
+      color: #ff4b91;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .cta button:hover {
+      background: #ff007f;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Services Header -->
+  <div class="services-header">
+    <h1>✨ My Mehndi Services ✨</h1>
+    <p>Bringing Elegance to Every Occasion – Choose the perfect design for your special day.</p>
+  </div>
+
+  <!-- Services Section -->
+  <div class="services-container">
+    <div class="service-card">
+      <img src="img16.jpg" alt="Daily Mehndi">
+      <h3>Daily Mehndi</h3>
+      <p>Quick and elegant designs for casual events, festivals, or simply to pamper yourself.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="img27.jpg" alt="Party Mehndi">
+      <h3>Party Mehndi</h3>
+      <p>Trendy and stylish patterns, perfect for birthdays, engagements, and festive celebrations.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="img9.jpg" alt="Matte Mehndi">
+      <h3>Matte Mehndi</h3>
+      <p>A modern twist with a matte finish for a classy and elegant look.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="hero.jpg" alt="Bridal Mehndi">
+      <h3>Bridal Mehndi</h3>
+      <p>Intricate and detailed designs for hands and feet, customized with initials and motifs.</p>
+    </div>
+  </div>
+
+  <!-- Why Choose Me -->
+  <div class="why-choose">
+    <h2>🌸 Why Choose Me?</h2>
+    <ul>
+      <li>Creative & customized designs</li>
+      <li>High-quality natural mehndi</li>
+      <li>Long-lasting, dark stain</li>
+      <li>Hygienic & comfortable application</li>
+    </ul>
+  </div>
+
+  <!-- Call To Action -->
+  <div class="cta">
+    <h2>Book Your Mehndi Session Today 💖</h2>
+    <button>📅 Book Now</button>
+  </div>
+
+</body>
+</html>
