@@ -661,3 +661,65 @@ body {
     font-size: 0.9rem;
   }
 }
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #b91c1c; /* mehndi red */
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links li a:hover {
+  color: #facc15; /* yellow hover */
+}
+
+/* Hamburger hidden by default */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #b91c1c;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
