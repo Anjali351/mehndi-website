@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Henna Designs Gallery</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
+    h1 { text-align: center; margin-bottom: 20px; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; }
+    .card { background: white; padding: 10px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center; }
+    .card img { width: 100%; border-radius: 8px; }
+  </style>
+</head>
+<body>
+
+  <h1>Henna Designs</h1>
+  <div class="gallery" id="gallery"></div>
+
+  <script>
+    // Your designs data
+    const designs = [
+      { category: "bridal", img: "img9.jpg" },
+      { category: "bridal", img: "img1.jpg" },
+      { category: "bridal", img: "img3.jpg"},
+      { category: "bridal", img: "img5.jpg" },
+      { category: "bridal", img: "img31.jpg" },
+      { category: "bridal", img: "img32.jpg" },
+      { category: "bridal", img: "img33.jpg" },
+      { category: "bridal", img: "img34.jpg" },
+      { category: "bridal", img: "img21.jpg" },
+      { category: "bridal", img: "hero.jpg" },
+      { category: "bridal", img: "img22.jpg" },
+      { category: "bridal", img: "img13.jpg" },
+      { category: "bridal", img: "img29.jpg" },
+      { category: "bridal", img: "img15.jpg" },
+      { category: "bridal", img: "img2.jpg" },
+      { category: "party", img: "img6.jpg" },
+      { category: "party", img: "img7.jpg" },
+      { category: "party", img: "img8.jpg" },
+      { category: "party", img: "img10.jpg" },
+      { category: "party", img: "img11.jpg" },
+      { category: "party", img: "img12.jpg" },
+      { category: "party", img: "img14.jpg" },
+      { category: "party", img: "img16.jpg" },
+      { category: "party", img: "img17.jpg" },
+      { category: "party", img: "img18.jpg" },
+      { category: "party", img: "img19.jpg" },
+      { category: "party", img: "img20.jpg" },
+      { category: "party", img: "img23.jpg" },
+      { category: "party", img: "img24.jpg" },
+      { category: "party", img: "img26.jpg" },
+      { category: "party", img: "img27.jpg" },
+      { category: "party", img: "img28.jpg" },
+      { category: "party", img: "img30.jpg" },
+      { category: "all", img: "img1.jpg" },
+      { category: "all", img: "img2.jpg" },
+      { category: "all", img: "img3.jpg" },
+      { category: "all", img: "img25.jpg" },
+      { category: "all", img: "img5.jpg" },
+      { category: "all", img: "img6.jpg" },
+      { category: "all", img: "img7.jpg" },
+      { category: "all", img: "img8.jpg" },
+      { category: "all", img: "img9.jpg" },
+      { category: "all", img: "img10.jpg" },
+      { category: "all", img: "img11.jpg" },
+      { category: "all", img: "img12.jpg" },
+      { category: "all", img: "img13.jpg" },
+      { category: "all", img: "img14.jpg" },
+      { category: "all", img: "img15.jpg" },
+      { category: "all", img: "img16.jpg" },
+      { category: "all", img: "img17.jpg" },
+      { category: "all", img: "img18.jpg" },
+      { category: "all", img: "img19.jpg" },
+      { category: "all", img: "img20.jpg" },
+      { category: "all", img: "img21.jpg" },
+      { category: "all", img: "img22.jpg" },
+      { category: "all", img: "img23.jpg" },
+      { category: "all", img: "img24.jpg" },
+      { category: "all", img: "img26.jpg" },
+      { category: "all", img: "img27.jpg" },
+      { category: "all", img: "img28.jpg" },
+      { category: "all", img: "img29.jpg" },
+      { category: "all", img: "img30.jpg" },
+      { category: "all", img: "img31.jpg" },
+      { category: "all", img: "img32.jpg" },
+      { category: "all", img: "img33.jpg" },
+      { category: "all", img: "img34.jpg" },
+    ];
+
+    // Get category from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get("category") || "all";
+
+    // Filter designs
+    const filtered = category === "all" ? designs : designs.filter(d => d.category === category);
+
+    // Render
+    const gallery = document.getElementById("gallery");
+    filtered.forEach(d => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.innerHTML = `<img src="${d.img}" alt="${d.category} design">`;
+      gallery.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
